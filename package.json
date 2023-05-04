@@ -1,16 +1,23 @@
 {
-  "dependencies": {
-    "json-server": "^0.17.3"
-  },
-  "name": "my_work",
+  "name": "mock-api-template",
   "version": "1.0.0",
-  "main": "index.js",
-  "devDependencies": {},
+  "description": "mock server app",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "json-server --watch database.json"
+    "start": "node server.js"
   },
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CODEwithSANKETj/mock-api-template.git"
+  },
+  "keywords": [],
+  "author": "abdul",
   "license": "ISC",
-  "description": ""
-}
+  "bugs": {
+    "url": "https://github.com/CODEwithSANKETj/mock-api-template/issues"
+    },
+    "dependencies": {
+      "json-server": "^0.17.0"
+    },
+    "homepage": "https://github.com/CODEwithSANKETj/mock-api-template#readme"
+  }
