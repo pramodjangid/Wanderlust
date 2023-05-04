@@ -76,7 +76,7 @@ let mainSection = document.getElementById("tour-list-wrapper");
   
     let card_price=document.createElement("div")
     card_price.classList.add("card-price")
-    card_price.textContent=price
+    card_price.textContent=`Tour Price: ${price}`
   
   card_image.append(img)
   card_body.append(h3,card_desc,link,card_price)

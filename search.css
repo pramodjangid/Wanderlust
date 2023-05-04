@@ -14,7 +14,10 @@ body{
     flex-basis: 100%;
     gap: 4%;
     width: 70%;
-    margin: 15%;
+    margin: 11%;
+    background-color: #f5f7f9;
+    padding: 70px;
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
   }
   
   .card:not(:last-child) {
@@ -120,11 +123,12 @@ body{
 
  /* container */
 
-  #container{
-    background-image: url("image1.jpg");
-    background-repeat: repeat;
-    background-size: auto auto;
+  #box1{
+    background-image: url("image4.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
     padding-bottom: 25px;
+    height: 350px;
   }
 
 /* navbar */
@@ -157,9 +161,59 @@ body{
     width: 40%;
     display: flex;
     justify-content: space-between;
+    
+  }
+
+  #links a{
+    text-decoration: none;
+    color: black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
   }
 
   #contact-us{
     margin-left: 5% ;
     margin-right: 5%;
   }
+  #contact-us a{
+    text-decoration: none;
+    color: black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  } 
+
+  #text-wrapper{
+    width: 50%;
+    margin-left: 200px;
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 190px;
+     
+  }
+
+  #text-wrapper h1 {
+    font-size: 50px;
+    font-family: ui-sans-serif;
+    color: rgb(255 255 255);
+    /* margin-left: 100px; */
+    /* margin: auto; */
+
+  }
+  #text-wrapper button {
+    height: 25px;
+    border: none;
+    cursor: pointer;
+    background-color: #c14e23;
+    width: 100px;
+    font-weight: bold;
+    font-style: oblique;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-left: -150px;
+    color: white;
+    border-radius: 10px;
+    /* margin: auto; */
+  }
+
+  /* #tour-list-wrapper{
+    
+  } */
