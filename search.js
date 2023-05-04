@@ -1,13 +1,16 @@
-const toursURL = `${baseServerURL}/tours`;
+
+
+let baseServerURL=`https://mock-server-api-attempt-2.onrender.com`
+
+const toursURL = `${baseServerURL}/cities`;
 
 let mainSection = document.getElementById("tour-list-wrapper");
 
 
 
 
-window.addEventListener("load",function(){
     fetchAndRenderTours()
-  })
+  
   
   function fetchAndRenderTours(){
   
@@ -15,13 +18,9 @@ window.addEventListener("load",function(){
       'method':'GET'
     })
     .then((res)=>res.json())
-    .then((data)=>{
-  
-      ticketBookStatus.innerHTML=""
-    let ticketCard=`BOOKING STATUS : NOT booked yet!`
-    ticketBookStatus.append(ticketCard)
-     
-      getCardList(data);console.log(data)})
+    .then((data)=>{  
+        getCardList(data)   
+      console.log(data)})
     .catch((error)=>{console.log(error)})
   }
   
@@ -32,7 +31,7 @@ window.addEventListener("load",function(){
      cardList.classList.add("card-list")
   
      data.forEach((item)=>{
-      let card=createCard(item.image,item.place,item.description,item.price)
+      let card=createCard(item.image,item.place,item.desc,item.price)
   
       mainSection.innerHTML=""
       cardList.append(card)
@@ -42,7 +41,7 @@ window.addEventListener("load",function(){
   }
   
   
-  function createCard(image,place,description,price){
+  function createCard(image,place,desc,price){
     let card=document.createElement("div")
     card.classList.add("card")
   
@@ -50,19 +49,20 @@ window.addEventListener("load",function(){
     card_image.classList.add("card-image")
   
     let img=document.createElement("img")
-    img.src=`${baseServerURL}${image}`
+    img.src=image
     img.setAttribute("alt","pic")
   
     let card_body=document.createElement("div")
     card_body.classList.add("card-body")
+    
   
     let h3=document.createElement("h3")
     h3.classList.add("card-title")
     h3.textContent=place
   
     let card_desc=document.createElement("div")
-    card_desc.classList.add("card-description")
-    card_desc.textContent=description
+    card_desc.classList.add("card-desc")
+    card_desc.textContent=desc
   
     let link=document.createElement("a")
     link.setAttribute("href","#")
@@ -71,7 +71,7 @@ window.addEventListener("load",function(){
     link.textContent="See Details"
   
     link.addEventListener("click",function(){
-      ticketBookStatus.innerHTML=`Ticket Booking for : ${place}!`
+      
     })
   
     let card_price=document.createElement("div")
