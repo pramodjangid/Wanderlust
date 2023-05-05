@@ -40,6 +40,7 @@ let mainSection = document.getElementById("tour-list-wrapper");
   
   }
   
+  let placeName=null;
   
   function createCard(image,place,desc,price){
     let card=document.createElement("div")
@@ -71,7 +72,9 @@ let mainSection = document.getElementById("tour-list-wrapper");
     link.textContent="See Details"
   
     link.addEventListener("click",function(){
-      
+      location.replace("./placedetails.html")
+      placeName=place
+      localStorage.setItem("placeName",placeName)
     })
   
     let card_price=document.createElement("div")
@@ -86,3 +89,6 @@ let mainSection = document.getElementById("tour-list-wrapper");
   return card;
   
   }
+
+
+ 
