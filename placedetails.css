@@ -124,8 +124,8 @@ body{
  /* container */
 
   #box1{
-    background-image: url("images/image4.jpg");
-    background-repeat: no-repeat;
+    /* background-image: url("image3.jpeg"); */
+    background-repeat: repeat;
     background-size:cover;
     padding-bottom: 25px;
     height: 350px;
