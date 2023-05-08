@@ -5,8 +5,12 @@ const password_ = document.getElementById('password')
 const repassword_ = document.getElementById('password2')
 const form = document.querySelector('form')
 let data_length = 0
+const loader = document.querySelector("#loading")
+const warning_ = document.getElementById('warning')
+
 form.addEventListener('submit',function(e){
     e.preventDefault();
+   warning_.innerText = null
     chkunique()
 
     
@@ -27,14 +31,28 @@ function adduser(){
             "Bookings" : [],
             "Cancled" : []
         })
-    }).then(alert('User Registered'))
+    }).then(data=>{
+        var warning = document.createElement("p");
+            warning.innerHTML = "User Registered";
+            warning.style.color = "green";
+            warning.style.fontWeight = "bold";
+            warning.style.textAlign = "center";
+            warning.style.marginTop = "10px";
+            warning_.appendChild(warning);
+    })
 }
 
 
 function chkunique(){
+    loader.classList.add('display')
     fetch('https://mock-server-api-attempt-2.onrender.com/Users')
-    .then(res=>res.json())
+    
+    .then(res=>{
+        loader.classList.remove('display')
+       return res.json()
+    })
     .then(data=>{
+        
         data_length = data.length
         let flag = true
         
@@ -51,10 +69,22 @@ function chkunique(){
                 adduser()
             }
         else if(flag){
-            alert('Please enter the Password Correctly')
+            var warning = document.createElement("p");
+            warning.innerHTML = "Password Does not match";
+            warning.style.color = "red";
+            warning.style.fontWeight = "bold";
+            warning.style.textAlign = "center";
+            warning.style.marginTop = "10px";
+            warning_.appendChild(warning);
         }
         else{
-            alert('Email id already exists');
+            var warning = document.createElement("p");
+            warning.innerHTML = "Email Id Already Exists!";
+            warning.style.color = "red";
+            warning.style.fontWeight = "bold";
+            warning.style.textAlign = "center";
+            warning.style.marginTop = "10px";
+            warning_.appendChild(warning);
         }
 
     })
