@@ -10,7 +10,7 @@ body{
     background-repeat: repeat;
     background-size:cover;
     padding-bottom: 25px;
-    height: 550px;
+    height: 500px;
     position: relative;
   }
 
@@ -48,19 +48,21 @@ body{
   }
 
   #links a{
+    font-size: 13px;
     text-decoration: none;
-    color: black;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgb(34, 32, 32);
+    font-family: 'Ubuntu', sans-serif;
   }
 
   #contact-us{
+    font-size: 13px;
     margin-left: 5% ;
     margin-right: 5%;
   }
   #contact-us a{
     text-decoration: none;
-    color: black;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgb(39, 36, 36);
+    font-family: 'Ubuntu', sans-serif;
   } 
 
   #text-wrapper{
@@ -75,34 +77,99 @@ body{
   }
 
   #text-wrapper h1 {
-    font-size: 50px;
-    font-family: ui-sans-serif;
-    color: rgb(255 255 255);
-    /* margin-left: 100px; */
-    /* margin: auto; */
-
-  }
-  #text-wrapper h4 {
-    font-size: 20px;
-    font-family: ui-sans-serif;
-    /* margin-left: 100px; */
-    /* margin: auto; */
-
-  }
-  /* #text-wrapper button {
-    height: 25px;
-    border: none;
-    cursor: pointer;
-    background-color: #c14e23;
-    width: 100px;
-    font-weight: bold;
-    font-style: oblique;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    margin-left: -150px;
-    color: white;
-    border-radius: 10px;
+    letter-spacing: -1px;
+    font-size: 45px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(250, 245, 245);
+    padding-left: 20px;
+    padding-right: 20px;
     
-  } */
+
+  }
+  #text-wrapper h6 {
+    margin-top: -20px;
+    font-size: 23px;
+    letter-spacing: 1px;
+    font-family: sans-serif;
+    color: rgb(255, 255, 255);
+
+  }
+
+  /* search bar */
+
+
+  /* Style the search container */
+.search-container {
+    position: relative;
+    width: 500px;
+    height: 30px;
+    margin: -10px 380px;
+  }
+  
+  /* Style the search input field */
+  .search-container input[type=text] {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 50px;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 0 60px 0 20px;
+    background-color: #fff;
+    border: none;
+    border-radius: 35px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Style the search button */
+  .search-container button[type=submit] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 3;
+    width: 100px;
+    height: 50px;
+    background-color: rgb(243, 71, 8);
+    border: none;
+    border-radius: 25px;
+    left: 480px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  /* Add hover effect to the search button */
+  .search-container button[type=submit]:hover {
+    background-color:  rgb(243, 71, 8);
+    transform: scale(1.1);
+  }
+  
+  /* Add icon to the search button */
+  .search-container button[type=submit] i {
+    margin-right: 5px;
+  }
+  
+  /* Style the line */
+  .search-container .line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #ddd;
+    border-radius: 3px;
+    z-index: 1;
+    transition: all 0.2s ease;
+    
+  }
+  
+  /* Add focus effect to the line */
+  .search-container input[type=text]:focus + .line {
+    background-color: rgb(243, 71, 8);
+  }
+  
 
   #box2 {
     display: grid;
@@ -134,7 +201,7 @@ body{
 
 
 #box3 {
-    margin-top: 150px;
+    margin-top: 130px;
 }  
 .shadow {
     position: relative;
@@ -150,7 +217,7 @@ body{
     text-align: center;
     font-size: 23px;
     letter-spacing: 2px;
-    position: absolute; top: 199%; left: 50%; transform: translate(-50%, -50%); z-index: 1;
+    position: static; transform: translate(-0%, -440%); z-index: 1;
     font-weight: bolder;
     font-family: 'Ubuntu', sans-serif;
     color: rgb(68, 64, 64);
@@ -166,7 +233,7 @@ body{
 
 #city {
     display: flex;
-    margin-top: 90px;
+    /* margin-top: 90px; */
     justify-content: center;
     
 }
@@ -177,14 +244,111 @@ body{
     width: 220px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
     padding-left: 20px;
-    margin: 15px;
+    margin: 20px;
     border-radius: 10px;
+    height:70px;
   }
   .city-wrapper h6 {
     color: rgb(219, 214, 208);
     font-size: 15px;
     margin-left: 30px;
     font-family: 'Ubuntu', sans-serif;
+  }
+
+ #box4 {
+    margin-top: 120px;
+    display: flex;
+    justify-content: space-between;
+ } 
+
+ .about-wrapper{
+    margin: auto;
+    margin-top: -17px;
+    font-family: 'Ubuntu', sans-serif;
+    color:rgb(88, 80, 80);
+    font-size: 20px;
+ }
+ .about-wrapper p{
+    color:rgb(200, 193, 193);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+ }
+
+ .about-wrapper button{
+    width: 90px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+    padding: 5px;
+    background-color: orangered;
+    color: whitesmoke;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+ }
+
+
+ .about-image-wrapper{
+    margin: auto;
+ }
+
+
+ /* footer */
+ 
+  footer::before {
+    content: "";
+    position: absolute;
+    top: 75%;
+    left: 20px;
+    right: 20px;
+    height: 2px;
+    background-color: #ccc;
+    transform: translateY(-50%);
+  }
+ footer {
+    font-size: 13px;
+    position: relative;
+    background-color: #171515;
+    padding: 40px 0;
+    margin-top: 50px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  .coloumn {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  footer h4 {
+    color: #f0eded;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  footer p {
+    color:  #dacfcf;
+    line-height: 1.6;
+  }
+  
+  footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  footer li {
+    margin-bottom: 10px;
+    color:  #dacfcf;
+  }
+  
+  footer a {
+    color:  #dacfcf;
+    text-decoration: none;
+  }
+  
+  footer a:hover {
+    color:  #dacfcf;
+    text-decoration: underline;
   }
 
 #box5 {
@@ -214,20 +378,8 @@ body{
 
 
 
-#head , #head2 , #head3 {
-align-items: center;
-    text-align: center;
-    
-}
-#head2 ,#head3{
-    color: rgb(179, 177, 174);
-}
-#head2{
-    margin-top: 40px;
-}
-#head3{
-    margin-top: -10px;
-}
+/* mid section */
+
 .basic{
    margin-top: 50px;
     display: flex;
@@ -235,20 +387,24 @@ align-items: center;
     margin-left: 10%;
     margin-right: 10%;
     justify-content: space-around;
+    font-family: 'Ubuntu', sans-serif;
+
 }
 .basic_div {
+    font-size: 16px;
     width: 25%;
-  
     position: relative;
     display: inline-block;
     border-radius: 15px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+    font-family: fangsong;
 }
 
 .basic img {
     display: block;
     max-width: 100%;
-    width: 250px;
+    width: 280px;
     height: 200px;
     border-radius: 15px;
 }
@@ -268,40 +424,48 @@ align-items: center;
     border: none;
     border-radius: 5px;
     font-size: 90%;
+    cursor: pointer;
 }
 
 .basic_div h2{
     margin-top: 15%;
     text-align: center;
     font-size: 110%;
-    font-family: Georgia;
+    font-family: sans-serif;
+    color: rgb(44, 44, 44);
 }
 .basic_div > p{
     text-align: center;
-    color: rgb(135, 137, 138);
+    color:rgb(191, 180, 180)
 }
 .basic_div > div{
     display: flex;
     justify-content: space-between;
-    margin-left: 10%;
-    margin-right: 10%;
-    font-size: 15px;
-    color: rgb(135, 137, 138);
+    margin-left: 15%;
+    margin-right: 15%;
+    font-size: 14px;
+    color:rgb(191, 180, 180)
     
 }
-#mid_button{
-    margin-top: 50px;
+
+#mid_button {
+    text-align: center;
+    margin-top: 120px;
+    margin-bottom: 100px;
+}
+#mid_button button {
+    width: 180px;
     padding: 10px 20px;
     background-color: #da451c;
     color: white;
     border: none;
     border-radius: 5px;
-    font-size: 90%;
+    font-size: 20px;
+    cursor: pointer;
+    
     
 }
 .map_div{
-    margin-top: 35px;
-   
     display: flex;
     
 }
@@ -309,27 +473,24 @@ align-items: center;
     width: 50%;
 }
 #image_map img{
-    width: 100%;
+    width: 50%;
+    margin-left: 140px;
 }
 #info_div{
-    
-    margin-top: 90px;
-    margin-left: 100px;
-    
-    height: 300px;
-    width: 40%;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-   
+    margin-left: 90px;
+    font-size: 15px;
+    margin-top: -20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: left;
 }
 #info_div h2 {
     margin-top: 30%;
     }
 #info_div p {
-    margin-top: 50px;
+    margin-top: 20px;
 text-align: justify;
-font-size: large;
-color: rgb(194, 196, 198);
+font-size: 15px;
+color: rgb(188, 193, 199);
 }
 
 
@@ -341,7 +502,7 @@ color: rgb(194, 196, 198);
 
 .back_image img{
     opacity: 0.6;
-    height: 300px;
+    height: 350px;
     width: 100%;
 }
 
@@ -358,18 +519,22 @@ color: rgb(194, 196, 198);
     color: rgb(244, 30, 30);
 }
 
-.back_image_text h2 {
-    font-size: 48px;
-    color: rgb(0, 0, 0);
+.back_image_text h1 {
+    font-family:  Arial, Helvetica, sans-serif;
+    font-size: 32px;
+    color: rgb(47, 45, 45);
     margin-bottom: 20px;
+    letter-spacing: -1px;
 }
 
 .back_image_text button {
+    margin-bottom: 50px;
     padding: 10px 20px;
     background-color: #da451c;
     color: rgb(255, 254, 254);
     border: none;
     border-radius: 5px;
-    font-size: 24px;
+    font-size: 19px;
+    cursor: pointer;
 }
 
