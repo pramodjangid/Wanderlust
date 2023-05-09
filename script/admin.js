@@ -22,7 +22,7 @@ function regestration(){
     else{
         table.style.display = 'none'
     }
-    console.log(table.style.display)
+    //console.log(table.style.display)
     showregestered()
 
 }
@@ -35,7 +35,7 @@ function table_cancled(){
     else{
         table1.style.display = 'none'
     }
-    console.log(table1.style.display)
+    //console.log(table1.style.display)
 
 }
 function adduser(){
