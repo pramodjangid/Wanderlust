@@ -170,6 +170,16 @@ body{
     font-family: Georgia, 'Times New Roman', Times, serif;
   }
 
+  #login-wrapper{
+    margin-left: 40px;
+  }
+  #login-wrapper a{
+    font-size: 13px;
+    text-decoration: none;
+    color: rgb(34, 32, 32);
+    font-family: 'Ubuntu', sans-serif;
+  }
+
   #contact-us{
     margin-left: 5% ;
     margin-right: 5%;

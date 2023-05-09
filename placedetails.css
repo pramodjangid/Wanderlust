@@ -214,6 +214,16 @@ body{
     /* margin: auto; */
   }
 
+  #login-wrapper{
+    margin-left: 40px;
+  }
+  #login-wrapper a{
+    font-size: 13px;
+    text-decoration: none;
+    color: rgb(34, 32, 32);
+    font-family: 'Ubuntu', sans-serif;
+  }
+
   /* #tour-list-wrapper{
     
   } */

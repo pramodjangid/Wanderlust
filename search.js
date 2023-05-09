@@ -6,11 +6,41 @@ const toursURL = `${baseServerURL}/cities`;
 
 let mainSection = document.getElementById("tour-list-wrapper");
 
+let loginWrapper= document.getElementById("login-wrapper")
+
+let userName=localStorage.getItem("user_name") || null ;
+
+if(userName){
+    loginWrapper.innerHTML=userName
+}
+
+
+document.querySelector("button").addEventListener("click",function(){
+   fetchAndRenderTours()
+})
 
 
 
-    fetchAndRenderTours()
-  
+
+ let inputQuery=localStorage.getItem("input")
+
+ renderPlaces(inputQuery)
+ function renderPlaces(inputQuery){
+
+  fetch(`${baseServerURL}/cities?place=${inputQuery}`,{
+      'method':'GET'
+    })
+    .then((res)=>res.json())
+    .then((data)=>{  
+      getCardList(data)   
+      console.log(data)
+    })
+    .catch((error)=>{console.log(error)})
+
+}
+
+
+
   
   function fetchAndRenderTours(){
   
