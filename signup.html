@@ -45,28 +45,55 @@
 		input[type=submit]:hover {
 			background-color: #e67f11;
 		}
+		#loading{
+			width: 2rem;
+			height: 2rem;
+			border: 5px solid #f3f3f3;
+			border-top: 6px solid #9c41f2;
+			border-radius: 100%;
+			margin: auto;
+			visibility: hidden;
+			animation: spin 1s infinite linear;
+
+		}
+		#loading.display{
+			visibility: visible;
+		}
+		@keyframes spin{
+			from{
+				transform: rotate(0deg);
+			}
+			to{
+				transform: rotate(360deg);
+			}
+		}
 	</style>
 </head>
 <body>
 	<h1>Sign Up</h1>
-	<form>
-		<label for="name">Name</label>
-		<input type="text" id="name" name="name" placeholder="Your name..." required>
-		
-		<label for="email">Email</label>
-		<input type="text" id="email" name="email" placeholder="Your email..." required>
-		
-		<label for="Age">Age</label>
-		<input type="text" id="Age" name="Age" placeholder="Age" required>
-
-		<label for="password">Password</label>
-		<input type="password" id="password" name="password" placeholder="Your password..."required>
-		
-		<label for="password2">Retype Password</label>
-		<input type="password" id="password2" name="password2" placeholder="Retype your password..."required>
-		<a href="/login.html">Already a customer ? Click Here</a>
-		<input type="submit" value="Sign Up">
-	</form>
+	<div>
+		<form>
+			<label for="name">Name</label>
+			<input type="text" id="name" name="name" placeholder="Your name..." required>
+			
+			<label for="email">Email</label>
+			<input type="text" id="email" name="email" placeholder="Your email..." required>
+			
+			<label for="Age">Age</label>
+			<input type="text" id="Age" name="Age" placeholder="Age" required>
+	
+			<label for="password">Password</label>
+			<input type="password" id="password" name="password" placeholder="Your password..."required>
+			
+			<label for="password2">Retype Password</label>
+			<input type="password" id="password2" name="password2" placeholder="Retype your password..."required>
+			<a href="/login.html">Already a customer ? Click Here</a>
+			
+			<input type="submit" value="Sign Up">
+		</form>
+		<div id="warning"></div>
+		<div id="loading"></div>
+	</div>
     <script src="/script/signup.js"></script>
 </body>
 </html>

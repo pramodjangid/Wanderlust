@@ -4,16 +4,15 @@
 	<title>Login</title>
 	<style type="text/css">
 		body {
-
 			background-size: cover;
 			background-position: center;
 			font-family: Arial, sans-serif;
 		}
-        img{
-            align-items: center;
-            margin-left: 10%;
-
+        img {
+            display: block;
+            margin: 0 auto;
             width: 80%;
+            max-width: 600px;
         }
 		form {
             z-index: 5;
@@ -26,10 +25,18 @@
 		}
 		h1 {
 			text-align: center;
-			color: #fff;
+			color: #ee7e1b;
 			text-shadow: 0px 0px 5px #000;
 			margin-top: 50px;
+			font-size: 3rem;
+			font-weight: bold;
 		}
+        h2 {
+            text-align: center;
+            color: #555;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
 		input[type=text], input[type=password] {
 			width: 100%;
 			padding: 12px 20px;
@@ -38,6 +45,7 @@
 			border: 1px solid #ccc;
 			border-radius: 4px;
 			box-sizing: border-box;
+            font-size: 1.2rem;
 		}
 		input[type=submit] {
 			background-color: #ee7e1b;
@@ -48,11 +56,13 @@
 			border-radius: 4px;
 			cursor: pointer;
 			width: 100%;
+            font-size: 1.2rem;
+            transition: background-color 0.3s;
 		}
 		input[type=submit]:hover {
 			background-color: #db840a;
 		}
-        button{
+        button {
             background-color: #a8764a;
 			color: white;
 			padding: 14px 10px;
@@ -61,7 +71,40 @@
 			border-radius: 4px;
 			cursor: pointer;
 			width: 100%;
+            font-size: 1.2rem;
+            transition: background-color 0.3s;
         }
+        button:hover {
+            background-color: #896938;
+        }
+        a {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            font-size: 1.2rem;
+            color: #555;
+        }
+		#loading {
+			width: 2rem;
+			height: 2rem;
+			border: 5px solid #f3f3f3;
+			border-top: 6px solid #9c41f2;
+			border-radius: 100%;
+			margin: auto;
+			visibility: hidden;
+			animation: spin 1s infinite linear;
+		}
+		#loading.display {
+			visibility: visible;
+		}
+		@keyframes spin {
+			from {
+				transform: rotate(0deg);
+			}
+			to {
+				transform: rotate(360deg);
+			}
+		}
 	</style>
 </head>
 <body>
@@ -78,6 +121,8 @@
         <button onclick="chkAdmin()">Login as Admin</button>
 		<input type="submit" value="Log In">
 	</form>
+	<div id="warning"></div>
+	<div id="loading"></div>
     <script src="/script/login.js"></script>
 </body>
 </html>
