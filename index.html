@@ -18,11 +18,15 @@
                 <h3>Wanderlust</h3>
             </div>
             <div id="links">
-                <a href="#">HOME</a>
+                <a href="./index.html">HOME</a>
                 <a href="#">ABOUT US</a>
                 <a href="#">USOUR SERVICE</a>
                 <a href="#">BLOG</a>
             </div>
+            <div id="login-wrapper">
+                <a href="./login.html">LOG IN</a>
+            </div>
+
             <div id="contact-us"><a href="#">CONTACT US</a></div>
         </div>
         <div id="text-wrapper">
@@ -32,8 +36,8 @@
         <div id="searchbar">
             <div class="search-container">
                 <form>
-                  <input type="text" placeholder="Where you want to go...">
-                  <button type="submit"><i class="fas fa-search">search</i></button>
+                  <input  id="inp" type="text" value="" placeholder="Where you want to go...">
+                  <button id="searchbtn" type="submit" onclick="jump()"><i class="fas fa-search">search</i></button>
                 </form>
                 <div class="line"></div>
               </div>
@@ -231,5 +235,7 @@
 </div>
 
 </body>
-<script src="/index.js"></script>
 </html>
+
+<script src="./index.js"></script>
+
