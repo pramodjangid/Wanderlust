@@ -39,6 +39,10 @@ function adduser(){
             warning.style.textAlign = "center";
             warning.style.marginTop = "10px";
             warning_.appendChild(warning);
+        
+        setTimeout(()=>{
+            window.location.href="/login.html"
+        },5000)
     })
 }
 
