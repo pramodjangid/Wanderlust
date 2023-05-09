@@ -15,11 +15,14 @@ let loginWrapper= document.getElementById("login-wrapper")
 
 let userName=localStorage.getItem("user_name") || null ;
 
-
 if(userName){
     loginWrapper.innerHTML=userName
 }
 
+
+document.getElementById("joinbtn").addEventListener("click",function(){
+  window.location.href="./signup.html"; 
+})
 
 const btn= document.getElementById("searchbtn")
 
