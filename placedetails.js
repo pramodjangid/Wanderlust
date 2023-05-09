@@ -68,7 +68,7 @@ function getPlacesCardList(data){
    data.forEach((item)=>{
     
     item.details.forEach((ele)=>{
-      let card=createPlacesCard(ele.name,ele.image,ele.details)
+      let card=createPlacesCard(ele.name,ele.image,ele.details,item.price)
       mainSection.innerHTML=""
     cardList.append(card)
     
@@ -79,7 +79,7 @@ function getPlacesCardList(data){
 }
 
 
-function createPlacesCard(name,image,details){
+function createPlacesCard(name,image,details,price){
   let card=document.createElement("div")
   card.classList.add("card")
 
@@ -107,6 +107,11 @@ function createPlacesCard(name,image,details){
   link.setAttribute("data-name",name)
   link.classList.add("card-link")
   link.textContent="Book Now "
+  link.addEventListener('click',function(e){
+    e.preventDefault();
+    localStorage.setItem('price',price)
+    window.location.href='/payment.html'
+  })
 
   link.addEventListener("click",function(){
     

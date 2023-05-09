@@ -16,10 +16,11 @@ function chk(){
     .then(data=>{
         loader.classList.remove('display')
         let flag = false
+        let name__ = ''
         data.forEach(element => {
             if(element.Email==email.value && element.Password==password.value){
+                name__ = element.Name
                 flag = true
-            
             }
         });
         if(flag){
@@ -30,6 +31,10 @@ function chk(){
             warning.style.textAlign = "center";
             warning.style.marginTop = "10px";
             warning_.appendChild(warning);
+            localStorage.setItem('user_name',name__)
+            setTimeout(()=>{
+                window.location.href='/index.html'
+            },5000)
 
         } 
         else{

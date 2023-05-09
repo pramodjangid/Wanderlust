@@ -1,3 +1,8 @@
+
+function joinow(){
+    window.location.href="/signup.html"
+}   
+
 let baseServerURL=`https://mock-server-api-attempt-2.onrender.com`
 
 const toursURL = `${baseServerURL}/cities`;
@@ -40,6 +45,7 @@ btn.addEventListener("click",function(e){
 // })
   
   
+
 
 
 
