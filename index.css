@@ -54,6 +54,17 @@ body{
     font-family: 'Ubuntu', sans-serif;
   }
 
+
+  #login-wrapper{
+    margin-left: 40px;
+  }
+  #login-wrapper a{
+    font-size: 13px;
+    text-decoration: none;
+    color: rgb(34, 32, 32);
+    font-family: 'Ubuntu', sans-serif;
+  }
+
   #contact-us{
     font-size: 13px;
     margin-left: 5% ;
@@ -64,6 +75,8 @@ body{
     color: rgb(39, 36, 36);
     font-family: 'Ubuntu', sans-serif;
   } 
+
+
 
   #text-wrapper{
     width: 50%;
@@ -105,6 +118,7 @@ body{
     height: 30px;
     margin: -10px 380px;
   }
+
   
   /* Style the search input field */
   .search-container input[type=text] {

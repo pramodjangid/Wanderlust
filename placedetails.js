@@ -5,6 +5,14 @@ const toursURL = `${baseServerURL}/cities`;
 
 let mainSection = document.getElementById("tour-details-list-wrapper");
 
+let loginWrapper= document.getElementById("login-wrapper")
+
+let userName=localStorage.getItem("user_name") || null ;
+
+if(userName){
+    loginWrapper.innerHTML=userName
+}
+
 
 
 let placeName=localStorage.getItem("placeName") || null;
