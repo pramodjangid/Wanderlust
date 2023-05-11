@@ -2,8 +2,8 @@
 
 Hello and welcome to our project! We are a team of developers passionate about creating innovative solutions to real-world problems. Our team consists of the following members:
 
-Pramod Kumar Jangid, Team Lead (My Linkedin Profile:- https://www.linkedin.com/in/pramodjangid) <br>
-Sanket Jaiswal, Aspiring Web Developer
+Pramod Kumar Jangid, Team Lead (Linkedin Profile:- [pramodjangid](https://www.linkedin.com/in/pramodjangid)) <br>
+Sanket Jaiswal, Aspiring Web Developer (Linkedin Profile:- [sanketjaiswal](https://www.linkedin.com/mwlite/in/sanket244))
 
 As a team, we bring a diverse set of skills and experiences to the table, which allows us to approach problems from multiple perspectives and develop creative solutions that meet the needs of our users.
 
@@ -46,7 +46,6 @@ Tools
 
 ![image](https://user-images.githubusercontent.com/80309747/229348866-a41c6e5d-458a-4396-a0f6-ce974e5cfae0.png)
 ![image](https://user-images.githubusercontent.com/80309747/229348874-6e5a14c8-46e7-457c-b14c-c2491866064f.png)
-![image](https://user-images.githubusercontent.com/80309747/229348882-7a0c4058-7f44-48be-88a0-d37da699bbfc.png)
 ![image](https://user-images.githubusercontent.com/80309747/229348884-8fd728ce-a616-4341-a4ca-fe15677f0d3c.png)
 
 We also have used some bootstrap templates and External CSS.
